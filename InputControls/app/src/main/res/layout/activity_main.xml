@@ -110,6 +110,13 @@
             android:buttonTint="#00BCD4"
             android:id="@+id/female"
             android:text="Female"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="#00BCD4"
+            android:id="@+id/others"
+            android:text="others"/>
     </RadioGroup>
     <CheckBox
         android:layout_width="match_parent"
