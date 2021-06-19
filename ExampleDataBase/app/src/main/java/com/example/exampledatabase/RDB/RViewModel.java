@@ -16,21 +16,20 @@ public class RViewModel extends AndroidViewModel {
         rRepository = new RRepository(application);
         list = rRepository.readAllData();
     }
-    /* This Method is to insert the data*/
+    /*This method is to insert the data*/
     public void insert(RTable rTable){
         rRepository.insert(rTable);
     }
-    /*This method is to read the data */
-    public LiveData<List<RTable>> readData() {
+    /*This method is to read the data*/
+    public LiveData<List<RTable>> readData(){
         return list;
     }
     /*This method is to update the data*/
     public void update(RTable rTable){
         rRepository.update(rTable);
     }
-    /* This method is to delete the data*/
+    /*This method is to Delete the data*/
     public void delete(RTable rTable){
         rRepository.delete(rTable);
     }
-
 }

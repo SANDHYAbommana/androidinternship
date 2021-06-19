@@ -7,12 +7,14 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
+import com.example.exampledatabase.RDB.RTable;
+
 import java.util.List;
 
 @Dao
 public interface RDao {
-    // Data Access Object
-    //create ,Read,Update,Delete
+    //Data Access Object
+    //Create,Read,Update,Delete
     @Insert
     void insert(RTable rTable);
 
@@ -20,9 +22,10 @@ public interface RDao {
     LiveData<List<RTable>> readAll();
 
     @Update
-    void update(RTable  rTable);
+    void update(RTable rTable);
 
     @Delete
     void delete(RTable rTable);
+
 
 }
