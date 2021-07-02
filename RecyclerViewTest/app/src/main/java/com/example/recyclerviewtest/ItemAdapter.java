@@ -24,17 +24,16 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder> 
 
     }
 
-    @NonNull
-    @org.jetbrains.annotations.NotNull
+
     @Override
-    public ItemAdapter.MyViewHolder onCreateViewHolder(@NonNull @org.jetbrains.annotations.NotNull ViewGroup parent, int viewType) {
+    public ItemAdapter.MyViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(ct).inflate(R.layout.item_row,parent,false);
         MyViewHolder holder = new MyViewHolder(v);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull @org.jetbrains.annotations.NotNull ItemAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder( ItemAdapter.MyViewHolder holder, int position) {
         holder.iv.setImageResource(myImages[position]);
         holder.tv1.setText(myNames[position]);
         holder.tv2.setText(myPrices[position]);
@@ -50,7 +49,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder> 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView iv;
         TextView tv1,tv2;
-        public MyViewHolder(@NonNull @org.jetbrains.annotations.NotNull View itemView) {
+        public MyViewHolder(View itemView) {
             super(itemView);
             iv = itemView.findViewById(R.id.itemImage);
             tv1 = itemView.findViewById(R.id.itemName);
